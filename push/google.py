@@ -21,5 +21,5 @@ class GCM(PushBase):
                 data={'message': self.message}
             )
         except (gcm.gcm.GCMNotRegisteredException, gcm.gcm.GCMInvalidRegistrationException):
-            print("Registration ID %s is invalid" % self.token)
+            print(("Registration ID %s is invalid" % self.token))
             raise InvalidTokenException(self.device_id, self.token)
